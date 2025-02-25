@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              primary: "#080808",
+              secoundary: "rgba(8, 8, 8, 0.7)",
+              paragraph: "rgba(8, 8, 8, 0.5)",
+              Hover: "rgba(8, 116, 242, 0.05)",
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-[#F4F5F7]">
+    <header class="p-2 max-w-6xl mx-auto">
+        <nav class="flex justify-between items-center">
+            <div class="flex gap-2 md:gap-3 lg:gap-3">
+                <img class="max-w-14" src="../photo/Group.png" alt="logo">
+                <div>
+                    <h3 class="text-lg lg:text-2xl font-extrabold text-primary mb-2">$<span id="main_balace">45000</span></h3>
+                    <p class="text-sm font-normal text-paragraph">Available Balance</p>
+                </div>
+            </div>
+            <div>
+                <button class="flex gap-3 px-3 py-2 justify-center items-center border-2 border-solid border-[#0874F2] rounded-md">
+                    <img src="../photo/Frame.png" alt="frame">
+                    <p class="text-sm font-normal text-paragraph">Log Out</p>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+<main class="p-2 max-w-6xl mx-auto">
+    <section class="mt-8 mb-6">
+        <h1 class="text-2xl font-bold text-primary mb-3">🔥 Welcome to Payooo!</h1>
+        <p class="text-base font-normal text-paragraph max-w-96 lg:max-w-full">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+    </section>
+
+    <section class="mb-8">
+        <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-6 gap-4">
+            <div id="money_id" class="max-w-36 flex flex-col items-center py-5 gap-2 rounded-xl border-2 border-solid border-[rgba(8, 8, 8, 0.1)] cursor-pointer hover:bg-Hover group">
+                <img class="max-w-6" src="../photo/wallet1.png" alt="wallet1">
+                <h4 class="text-sm group-hover:scale-110 group-hover:text-[#0874F2] group-hover:font-bold font-normal text-secoundary">Add Money</h4>
+            </div>
+            <div id="cashOut_id" class="max-w-36 flex flex-col items-center py-5 gap-2 rounded-xl border-2 border-solid border-[rgba(8, 8, 8, 0.1)] cursor-pointer hover:bg-Hover group">
+                <img class="max-w-6" src="../photo/send1.png" alt="wallet1">
+                <h4 class="text-sm group-hover:scale-110 group-hover:text-[#0874F2] group-hover:font-bold font-normal text-secoundary">Cashout</h4>
+            </div>
+            <div id="transfer_id" class="max-w-36 flex flex-col items-center py-5 gap-2 rounded-xl border-2 border-solid border-[rgba(8, 8, 8, 0.1)] cursor-pointer hover:bg-Hover group">
+                <img class="max-w-6" src="../photo/money1.png" alt="wallet1">
+                <h4 class="text-sm group-hover:scale-110 group-hover:text-[#0874F2] group-hover:font-bold font-normal text-secoundary">Transfer Money</h4>
+            </div>
+            <div id="bonus_id" class="max-w-36 flex flex-col items-center py-5 gap-2 rounded-xl border-2 border-solid border-[rgba(8, 8, 8, 0.1)] cursor-pointer hover:bg-Hover group">
+                <img class="max-w-6" src="../photo/bonus1.png" alt="wallet1">
+                <h4 class="text-sm group-hover:scale-110 group-hover:text-[#0874F2] group-hover:font-bold font-normal text-secoundary">Get Bonus</h4>
+            </div>
+            <div id="pay_id" class="max-w-36 flex flex-col items-center py-5 gap-2 rounded-xl border-2 border-solid border-[rgba(8, 8, 8, 0.1)] cursor-pointer hover:bg-Hover group">
+                <img class="max-w-6" src="../photo/purse1.png" alt="wallet1">
+                <h4 class="text-sm group-hover:scale-110 group-hover:text-[#0874F2] group-hover:font-bold font-normal text-secoundary">Pay Bill</h4>
+            </div>
+            <div class="max-w-36 flex flex-col items-center py-5 gap-2 rounded-xl border-2 border-solid border-[rgba(8, 8, 8, 0.1)] cursor-pointer hover:bg-Hover group">
+                <img class="max-w-6" src="../photo/transaction1.png" alt="wallet1">
+                <h4 class="text-sm group-hover:scale-110 group-hover:text-[#0874F2] group-hover:font-bold font-normal text-secoundary">Transactions</h4>
+            </div>
+        </div>
+    </section>
+
+<section id="add_Money">
+    <h5 class="text-xl font-semibold text-primary mb-4">Add Money</h5>
+    <div class="hero">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <div class="card bg-base-100 shrink-0 shadow-2xl">
+            <form class="card-body sm:w-96">
+                <legend class="text-[#080808] font-semibold text-base">Select A Bank</legend>
+                <select class="select select-bordered w-full max-w-xs">
+                    <option>Select bank</option>
+                    <option>Islami Bank</option>
+                    <option>Agrani bank</option>
+                    <option>Brack Bank</option>
+                  </select>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-[#080808] font-semibold text-base">Bank Account Number</span>
+                </label>
+                <input id="number_id1" type="number" placeholder="Enter 11 digit account number" class="input input-bordered"/>
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-[#080808] font-semibold text-base">Amount to Add</span>
+                </label>
+                <input id="amount_id" type="number" placeholder="Add Amount to Money" class="input input-bordered"/>
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-[#080808] font-semibold text-base">Pin Number</span>
+                </label>
+                <input id="pin_id" type="text" placeholder="Enter 4 digit pin number" class="input input-bordered"/>
+                
+              </div>
+              <div class="form-control mt-6">
+                <button id="btn_lgn1" class="btn btn-primary">Add Money</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+</section>
+<section id="cash_Out">
+    <h5 class="text-xl font-semibold text-primary mb-4">Cash Out</h5>
+    <div class="hero">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <div class="card bg-base-100 shrink-0 shadow-2xl">
+            <form class="card-body sm:w-96">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-[#080808] font-semibold text-base">Agent Number</span>
+                </label>
+                <input id="number_id2" type="number" placeholder="Enter 11 digit number" class="input input-bordered"/>
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-[#080808] font-semibold text-base">Amount</span>
+                </label>
+                <input id="ammount_id2" type="number" placeholder="Enter amount to withdraw" class="input input-bordered"/>
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-[#080808] font-semibold text-base">Pin Number</span>
+                </label>
+                <input id="pin_id2" type="text" placeholder="Enter 4 digit pin number" class="input input-bordered"/>
+                
+              </div>
+              <div class="form-control mt-6">
+                <button id="btn_lgn2" class="btn btn-primary">Withdraw Money</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+</section>
+<section id="transfer_Money">
+    <h5 class="text-xl font-semibold text-primary mb-4">Transfer Money</h5>
+    <div class="hero">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <div class="card bg-base-100 shrink-0 shadow-2xl">
+            <form class="card-body sm:w-96">
+                
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-[#080808] font-semibold text-base">User Account Number</span>
+                </label>
+                <input id="number_id" type="number" placeholder="Enter 11 digit number" class="input input-bordered"/>
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-[#080808] font-semibold text-base">Amount</span>
+                </label>
+                <input id="number_id" type="number" placeholder="Enter amount to transfer" class="input input-bordered"/>
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-[#080808] font-semibold text-base">Pin Number</span>
+                </label>
+                <input id="pin_id" type="text" placeholder="Enter 4 digit pin number" class="input input-bordered"/>
+        
+              </div>
+              <div class="form-control mt-6">
+                <button id="btn_lgn" class="btn btn-primary">Send Now</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+</section>
+<section id="get_Bonus">
+    <h5 class="text-xl font-semibold text-primary mb-4">Get Bonus</h5>
+    <div class="hero">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <div class="card bg-base-100 shrink-0 shadow-2xl">
+            <form class="card-body sm:w-96">
+                
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-[#080808] font-semibold text-base">Enter Bonus Coupon</span>
+                </label>
+                <input id="number_id" type="number" placeholder="Enter your coupon" class="input input-bordered"/>
+              </div>
+              <div class="form-control mt-6">
+                <button id="btn_lgn" class="btn btn-primary">Get Bonus</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+</section>
+<section id="pay_Bill">
+    <h5 class="text-xl font-semibold text-primary mb-4">Pay Bill</h5>
+    <div class="hero">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <div class="card bg-base-100 shrink-0 shadow-2xl">
+            <form class="card-body sm:w-96">
+                <legend class="text-[#080808] font-semibold text-base">Select To Pay</legend>
+                <select class="select select-bordered w-full max-w-xs">
+                    <option disabled>Select bank</option>
+                    <option>Islami Bank</option>
+                    <option>Agrani bank</option>
+                    <option>Brack Bank</option>
+                  </select>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-[#080808] font-semibold text-base">Biller Account Number</span>
+                </label>
+                <input id="number_id" type="number" placeholder="Enter account number" class="input input-bordered"/>
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-[#080808] font-semibold text-base">Amount to Pay</span>
+                </label>
+                <input id="number_id" type="number" placeholder="Add Amount to pay" class="input input-bordered"/>
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text text-[#080808] font-semibold text-base">Pin Number</span>
+                </label>
+                <input id="pin_id" type="text" placeholder="Enter 4 digit pin number" class="input input-bordered"/>
+              </div>
+              <div class="form-control mt-6">
+                <button id="btn_lgn" class="btn btn-primary">Pay Now</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+</section>
+</main>
+    
+
+
+    
+    <script src="../JS/section.js"></script>
+    <script src="../JS/add money.js"></script>
+    <script src="../JS/cashout.js"></script>
+</body>
+</html>
