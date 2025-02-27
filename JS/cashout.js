@@ -15,9 +15,6 @@ document.getElementById("btn_lgn2").addEventListener("click", function (event) {
         if (pinId2.length === 4 && pinId2 === "4291") {
             let atLastAmount = parseFloat(mainbalance) - parseFloat(ammountId2);
             mainBalace1.innerText = atLastAmount;
-
-
-           
             numberId.value = "";
             ammountId.value = "";
             pinId.value = "";
