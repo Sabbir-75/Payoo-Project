@@ -52,7 +52,7 @@
         <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-6 gap-4">
             <div id="money_id" class="max-w-36 flex flex-col items-center py-5 gap-2 rounded-xl border-2 border-solid border-[rgba(8, 8, 8, 0.1)] cursor-pointer hover:bg-Hover group">
                 <img class="max-w-6" src="./photo/wallet1.png" alt="wallet1">
-                <h4 class="text-sm group-hover:scale-110 group-hover:text-[#0874F2] group-hover:font-bold font-normal text-secoundary">Add Money</h4>
+                <h4 id="addMoney" class="text-sm group-hover:scale-110 group-hover:text-[#0874F2] group-hover:font-bold font-normal text-secoundary">Add Money</h4>
             </div>
             <div id="cashOut_id" class="max-w-36 flex flex-col items-center py-5 gap-2 rounded-xl border-2 border-solid border-[rgba(8, 8, 8, 0.1)] cursor-pointer hover:bg-Hover group">
                 <img class="max-w-6" src="./photo/send1.png" alt="wallet1">
@@ -70,7 +70,7 @@
                 <img class="max-w-6" src="./photo/purse1.png" alt="wallet1">
                 <h4 class="text-sm group-hover:scale-110 group-hover:text-[#0874F2] group-hover:font-bold font-normal text-secoundary">Pay Bill</h4>
             </div>
-            <div class="max-w-36 flex flex-col items-center py-5 gap-2 rounded-xl border-2 border-solid border-[rgba(8, 8, 8, 0.1)] cursor-pointer hover:bg-Hover group">
+            <div id="transactions_id" class="max-w-36 flex flex-col items-center py-5 gap-2 rounded-xl border-2 border-solid border-[rgba(8, 8, 8, 0.1)] cursor-pointer hover:bg-Hover group">
                 <img class="max-w-6" src="./photo/transaction1.png" alt="wallet1">
                 <h4 class="text-sm group-hover:scale-110 group-hover:text-[#0874F2] group-hover:font-bold font-normal text-secoundary">Transactions</h4>
             </div>
@@ -161,23 +161,23 @@
                 <label class="label">
                   <span class="label-text text-[#080808] font-semibold text-base">User Account Number</span>
                 </label>
-                <input id="number_id" type="number" placeholder="Enter 11 digit number" class="input input-bordered"/>
+                <input id="number_id3" type="number" placeholder="Enter 11 digit number" class="input input-bordered"/>
               </div>
               <div class="form-control">
                 <label class="label">
                   <span class="label-text text-[#080808] font-semibold text-base">Amount</span>
                 </label>
-                <input id="number_id" type="number" placeholder="Enter amount to transfer" class="input input-bordered"/>
+                <input id="amount_id3" type="number" placeholder="Enter amount to transfer" class="input input-bordered"/>
               </div>
               <div class="form-control">
                 <label class="label">
                   <span class="label-text text-[#080808] font-semibold text-base">Pin Number</span>
                 </label>
-                <input id="pin_id" type="text" placeholder="Enter 4 digit pin number" class="input input-bordered"/>
+                <input id="pin_id3" type="text" placeholder="Enter 4 digit pin number" class="input input-bordered"/>
         
               </div>
               <div class="form-control mt-6">
-                <button id="btn_lgn" class="btn btn-primary">Send Now</button>
+                <button id="btn_lgn3" class="btn btn-primary">Send Now</button>
               </div>
             </form>
           </div>
@@ -244,13 +244,32 @@
         </div>
       </div>
 </section>
+<section id="transactions">
+  <div class="overflow-x-auto bg-[#0874F2] rounded-sm">
+    <table class="table">
+      <!-- head -->
+      <thead>
+        <tr>
+          <th class="text-lg text-black font-semibold">Medium</th>
+          <th class="text-lg text-black font-semibold">Account number</th>
+          <th class="text-lg text-black font-semibold">Amount</th>
+        </tr>
+      </thead>
+      <tbody id="tablebody">
+      
+      </tbody>
+    </table>
+  
+  </div>
+</section>
 </main>
     
 
-
+<script src="./JS/Transfer Money.js"></script>
     <script src="./JS/manipulate.js"></script>
     <script src="./JS/section.js"></script>
     <script src="./JS/add money.js"></script>
     <script src="./JS/cashout.js"></script>
+    <script src="./JS/transection.js"></script>
 </body>
 </html>

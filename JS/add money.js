@@ -14,10 +14,11 @@ document.getElementById("btn_lgn1").addEventListener("click", function(event){
           let mainBalace11 = parseFloat(mainbalance) + parseFloat(amountId1);
           mainBalace1.innerText = mainBalace11;
 
-
           numberId.value = "";
           amountId.value = "";
           pinId.value = "";
+ 
+          transection("tablebody", "tr", numberId1, amountId1);
           
         }
         else{

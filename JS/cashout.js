@@ -19,6 +19,8 @@ document.getElementById("btn_lgn2").addEventListener("click", function (event) {
             ammountId.value = "";
             pinId.value = "";
 
+            transection2("tablebody", "tr", numberId2, ammountId2);
+
         }
         else {
             alert("Required Pin Number")
